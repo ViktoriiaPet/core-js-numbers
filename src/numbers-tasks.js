@@ -441,7 +441,7 @@ function toPrecision(number, precision) {
  * new Number(5) => 5
  * Number(-5)    => -5
  */
-function getNumberValue(number ) {
+function getNumberValue(/* number */) {
   throw new Error('Not implemented');
 }
 
@@ -460,8 +460,9 @@ function getNumberValue(number ) {
  * 5        => true
  * '5'      => false
  */
-function isNumber(/* number */) {
-  throw new Error('Not implemented');
+function isNumber(number) {
+  const thisIsNumber = Number.isInteger(number);
+  return thisIsNumber;
 }
 
 /**
